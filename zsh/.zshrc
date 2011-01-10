@@ -1,6 +1,7 @@
 # .zshrc: Zsh configuration file.
-# Copyright 2010 Tom Vincent <http://www.tlvince.com/contact/>
+# Copyright 2010-11 Tom Vincent <http://www.tlvince.com/contact/>
 
+# Source the global imports
 . "$XDG_CONFIG_HOME/shell/imports"
 
 autoload -U compinit promptinit
