@@ -4,12 +4,10 @@
 # Source the global imports
 . "$XDG_CONFIG_HOME/shell/imports"
 
-autoload -U compinit promptinit
+autoload -U compinit
 compinit
-promptinit
- 
-prompt walters
 
+PROMPT="[%n@%M %1~]$ "
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
