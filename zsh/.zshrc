@@ -13,4 +13,5 @@ prompt walters
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
-setopt extended_glob
+setopt EXTENDED_GLOB
+unsetopt BG_NICE
