@@ -15,3 +15,14 @@ setopt EXTENDED_GLOB
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 unsetopt BG_NICE
+
+# Invert cursor colour when in Vi normal mode
+zle-keymap-select () {
+    if [ $KEYMAP = vicmd ]; then
+        echo -ne "\033]12;DarkGrey\007"
+    else
+        echo -ne "\033]12;LightGrey\007"
+    fi
+}
+
+zle -N zle-keymap-select
