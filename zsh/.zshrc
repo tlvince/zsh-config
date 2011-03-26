@@ -12,4 +12,6 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 setopt EXTENDED_GLOB
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
 unsetopt BG_NICE
