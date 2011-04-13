@@ -21,8 +21,12 @@ unsetopt BG_NICE
 # Disable hostname completion
 zstyle ':completion:*' hosts off
 
+# Modules {{{1
+
+# Modules to load
+autoload -U compinit edit-command-line
+
 # Load the completion module
-autoload -U compinit
 compinit
 # Functions {{{1
 
@@ -35,9 +39,15 @@ zle-keymap-select () {
     fi
 }
 
+# Widgets {{{1
 zle -N zle-keymap-select
+zle -N edit-command-line
 
 # Bindings {{{1
+
+# Scroll through history with up/down arrows
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
+# Invoke a visual editor on the command line
+bindkey "^e" edit-command-line
