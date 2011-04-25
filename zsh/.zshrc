@@ -46,8 +46,8 @@ zle -N edit-command-line
 # Bindings {{{1
 
 # Scroll through history with up/down arrows
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # Invoke a visual editor on the command line
 bindkey "^e" edit-command-line
