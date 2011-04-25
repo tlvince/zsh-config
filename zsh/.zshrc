@@ -51,3 +51,6 @@ bindkey "^[[B" history-beginning-search-forward
 
 # Invoke a visual editor on the command line
 bindkey "^e" edit-command-line
+
+# Insert the last argument of the previous command
+bindkey -M viins "^[." insert-last-word
