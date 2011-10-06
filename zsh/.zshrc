@@ -1,5 +1,5 @@
 # .zshrc: zsh configuration file. {{{1
-# Copyright 2010-11 Tom Vincent <http://www.tlvince.com/contact/>
+# Copyright 2010-11 Tom Vincent <http://tlvince.com/contact/>
 # vim: set fdm=marker:
 
 # Environment {{{1
