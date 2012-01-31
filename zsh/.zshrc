@@ -28,6 +28,9 @@ setopt HIST_VERIFY
 # Disable hostname completion
 zstyle ':completion:*' hosts off
 
+# Enable menu selection
+zstyle ':completion:*' menu select
+
 # Modules {{{1
 
 # Modules to load
