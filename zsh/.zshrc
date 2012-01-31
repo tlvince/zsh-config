@@ -1,5 +1,5 @@
 # .zshrc: zsh configuration file. {{{1
-# Copyright 2010-11 Tom Vincent <http://tlvince.com/contact/>
+# Copyright 2010-12 Tom Vincent <http://tlvince.com/contact/>
 # vim: set fdm=marker:
 
 # Environment {{{1
@@ -12,9 +12,16 @@ PROMPT="[%n@%M %1~]$ "
 
 # Options {{{1
 setopt EXTENDED_GLOB
+setopt AUTO_CONTINUE    # Don't kill processes on shell exit
+unsetopt BG_NICE
+
+# History {{{2
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
-unsetopt BG_NICE
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
 
 # Tab completion {{{1
 
