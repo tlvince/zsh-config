@@ -5,7 +5,7 @@
 # Environment {{{1
 
 # Source the global imports
-. "$XDG_CONFIG_HOME/shell/imports"
+. "${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 
 # Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
 PROMPT="[%n@%M %1~]$ "
@@ -30,6 +30,8 @@ zstyle ':completion:*' hosts off
 
 # Enable menu selection
 zstyle ':completion:*' menu select
+
+fpath=($ZDOTDIR/completion $fpath)
 
 # Modules {{{1
 
