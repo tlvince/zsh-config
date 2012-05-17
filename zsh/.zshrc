@@ -25,9 +25,6 @@ setopt HIST_VERIFY
 
 # Tab completion {{{1
 
-# Disable hostname completion
-zstyle ':completion:*' hosts off
-
 # Enable menu selection
 zstyle ':completion:*' menu select
 
