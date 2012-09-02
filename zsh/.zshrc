@@ -48,11 +48,6 @@ zle-keymap-select () {
     fi
 }
 
-# Autojump
-precmd() {
-    _z --add "$(pwd -P)"
-}
-
 # Widgets {{{1
 zle -N zle-keymap-select
 zle -N edit-command-line
