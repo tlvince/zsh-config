@@ -37,6 +37,10 @@ autoload -U compinit edit-command-line
 
 # Load the completion module
 compinit
+
+# [Git]Hub
+compdef hub=git
+
 # Functions {{{1
 
 # Invert cursor colour when in Vi normal mode
