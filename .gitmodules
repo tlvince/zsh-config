@@ -1,3 +1,0 @@
-[submodule "zsh/fuzzy-match"]
-	path = zsh/fuzzy-match
-	url = https://github.com/tarruda/zsh-fuzzy-match.git

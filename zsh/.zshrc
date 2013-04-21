@@ -6,7 +6,6 @@
 
 # Source the global imports
 . "${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
-. "${XDG_CONFIG_HOME:-$HOME/.config}/shell/zsh/fuzzy-match/fuzzy-match.zsh"
 
 # Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
 PROMPT="[%n@%M %1~]$ "
