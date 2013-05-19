@@ -8,7 +8,7 @@
 IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 [[ -f "$IMPORTS" ]] && . "$IMPORTS"
 
-source "$ZDOTDIR/functions/setup_completion"
+source "$ZDOTDIR/modules/completion"
 
 # Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
 PROMPT="[%n@%M %1~]$ "
