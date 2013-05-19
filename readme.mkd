@@ -1,5 +1,11 @@
 # Zsh config
 
+## Usage
+
+1. Symlink `zshenv` to your home directory:
+
+        ln -s "$XDG_CONFIG_HOME/shell/zsh/.zshenv" "$HOME"
+
 ## Author
 
 Copyright 2010-2013 Tom Vincent <http://tlvince.com/contact>
