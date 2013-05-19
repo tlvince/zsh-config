@@ -5,7 +5,8 @@
 # Environment {{{1
 
 # Source the global imports
-. "${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
+IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
+[[ -f "$IMPORTS" ]] && . "$IMPORTS"
 
 # Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
 PROMPT="[%n@%M %1~]$ "
