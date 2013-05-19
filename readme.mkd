@@ -4,7 +4,7 @@
 
 1. Symlink `zshenv` to your home directory:
 
-        ln -s "$XDG_CONFIG_HOME/shell/zsh/.zshenv" "$HOME"
+        ln -s "$XDG_CONFIG_HOME/zsh/.zshenv" "$HOME"
 
 ## Author
 
