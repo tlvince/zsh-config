@@ -2,7 +2,13 @@
 
 ## Usage
 
-1. Symlink `zshenv` to your home directory:
+0. Set up your `XDG_{DATA,CACHE,CONFIG}_HOME` environment
+
+1. Clone:
+
+        git clone --recursive https://github.com/tlvince/zsh-config.git "$XDG_CONFIG_HOME/zsh"
+
+2. Symlink `zshenv` to your home directory:
 
         ln -s "$XDG_CONFIG_HOME/zsh/.zshenv" "$HOME"
 
