@@ -8,24 +8,11 @@
 IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 [[ -f "$IMPORTS" ]] && . "$IMPORTS"
 
+source "$ZDOTDIR/modules/options"
 source "$ZDOTDIR/modules/completion"
 
 # Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
 PROMPT="[%n@%M %1~]$ "
-
-# Options {{{1
-setopt EXTENDED_GLOB
-setopt AUTO_CONTINUE    # Don't kill processes on shell exit
-unsetopt BG_NICE
-
-# History {{{2
-setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_REDUCE_BLANKS
-setopt HIST_VERIFY
-
 
 # Modules {{{1
 
