@@ -36,9 +36,6 @@ zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
 # Separate man page sections.  Neat.
 zstyle ':completion:*:manuals' separate-sections true
 
-# Egomaniac!
-zstyle ':completion:*' list-separator 'fREW'
-
 # complete with a menu for xwindow ids
 zstyle ':completion:*:windows' menu on=0
 zstyle ':completion:*:expand:*' tag-order all-expansions
