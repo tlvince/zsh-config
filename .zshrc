@@ -23,9 +23,6 @@ autoload -U compinit edit-command-line
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
 
-# Load the completion module
-compinit
-
 # [Git]Hub
 compdef hub=git
 
