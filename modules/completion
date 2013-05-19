@@ -1,15 +1,65 @@
-# vim: ft=zsh:
+# zsh completion styles. {{{1
+# © 2013 Tom Vincent <http://tlvince.com/contact>
+# vim: ft=zsh fdm=marker:
 autoload -Uz compinit && compinit -i
 
-zstyle ':completion:*:*:*:*:*' menu select
+# By Frew <http://stackoverflow.com/a/171564> {{{1
+# Faster! (?)
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path "${ZDOTDIR:-$HOME}/.zcompcache"
-zstyle ':completion:*:*:*:*:processes' command 'ps -u $USER -o pid,user,comm -w'
 
-# case insensitive
+# case insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+zstyle ':completion:*' verbose yes
+zstyle ':completion:*:descriptions' format '%B%d%b'
+zstyle ':completion:*:messages' format '%d'
+zstyle ':completion:*:warnings' format 'No matches for: %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' completer _expand _complete _approximate _ignored
+
+# generate descriptions with magic.
+zstyle ':completion:*' auto-description 'specify: %d'
+
+# Don't prompt for a huge list, page it!
+zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+
+# Don't prompt for a huge list, menu it!
+zstyle ':completion:*:default' menu 'select=0'
+
+# Have the newer files last so I see them first
+zstyle ':completion:*' file-sort modification reverse
+
+# color code completion!!!!  Wohoo!
+zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
+
+# Separate man page sections.  Neat.
+zstyle ':completion:*:manuals' separate-sections true
+
+# Egomaniac!
+zstyle ':completion:*' list-separator 'fREW'
+
+# complete with a menu for xwindow ids
+zstyle ':completion:*:windows' menu on=0
+zstyle ':completion:*:expand:*' tag-order all-expansions
+
+# more errors allowed for large words and fewer for small words
+zstyle ':completion:*:approximate:*' max-errors 'reply=(  $((  ($#PREFIX+$#SUFFIX)/3  ))  )'
+
+# Errors format
+zstyle ':completion:*:corrections' format '%B%d (errors %e)%b'
+
+# Don't complete stuff already on the line
+zstyle ':completion::*:(rm|vi):*' ignore-line true
+
+# Don't complete directory we are already in (../here)
+zstyle ':completion:*' ignore-parents parent pwd
+
+zstyle ':completion::approximate*:*' prefix-needed false
+
+# Complete SSH hosts
 zstyle -e ':completion:*:hosts' hosts 'reply=(
   ${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) 2>/dev/null)"}%%[#| ]*}//,/ }
   ${=${${${${(@M)${(f)"$(cat ~/.ssh/config 2>/dev/null)"}:#Host *}#Host }:#*\**}:#*\?*}}
 )'
+

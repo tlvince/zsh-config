@@ -51,3 +51,6 @@ bindkey "^e" edit-command-line
 
 # Insert the last argument of the previous command
 bindkey -M viins "^[." insert-last-word
+
+# Complete the last word
+bindkey -M viins '\C-i' complete-word
