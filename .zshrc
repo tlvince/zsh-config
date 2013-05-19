@@ -8,6 +8,8 @@
 IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 [[ -f "$IMPORTS" ]] && . "$IMPORTS"
 
+source "$ZDOTDIR/functions/setup_completion"
+
 # Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
 PROMPT="[%n@%M %1~]$ "
 
@@ -24,12 +26,6 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
-# Tab completion {{{1
-
-# Enable menu selection
-zstyle ':completion:*' menu select
-
-fpath=($ZDOTDIR/completion $fpath)
 
 # Modules {{{1
 
