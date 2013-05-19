@@ -19,6 +19,10 @@ PROMPT="[%n@%M %1~]$ "
 # Modules to load
 autoload -U compinit edit-command-line
 
+# Smart URLs
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+
 # Load the completion module
 compinit
 
