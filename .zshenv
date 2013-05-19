@@ -4,3 +4,6 @@ fpath=(
   "$ZDOTDIR/modules"
   $fpath
 )
+
+completions="/usr/local/share/zsh-completions"
+[[ -d "$completions" ]] && fpath=("$completions" $fpath)
