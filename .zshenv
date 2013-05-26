@@ -2,8 +2,7 @@ ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 
 fpath=(
   "$ZDOTDIR/modules"
+  "$ZDOTDIR/completions"
+  "/usr/local/share/zsh-completions"
   $fpath
 )
-
-completions="/usr/local/share/zsh-completions"
-[[ -d "$completions" ]] && fpath=("$completions" $fpath)
