@@ -55,3 +55,6 @@ bindkey -M viins "^[." insert-last-word
 
 # Complete the last word
 bindkey -M viins '\C-i' complete-word
+
+# Shift-Tab
+bindkey '^[[Z' reverse-menu-complete
