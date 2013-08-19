@@ -8,8 +8,10 @@
 IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 [[ -f "$IMPORTS" ]] && . "$IMPORTS"
 
-source "$ZDOTDIR/modules/options"
-source "$ZDOTDIR/modules/completion"
+. "$ZDOTDIR/modules/options"
+. "$ZDOTDIR/modules/completion"
+
+which npm >/dev/null && . <(npm completion)
 
 # Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
 PROMPT="[%n@%M %1~]$ "
