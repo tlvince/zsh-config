@@ -1,0 +1,3 @@
+[submodule "vendor/sindresorhus/pure"]
+	path = vendor/sindresorhus/pure
+	url = https://github.com/sindresorhus/pure.git

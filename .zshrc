@@ -10,11 +10,9 @@ IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 
 . "$ZDOTDIR/modules/options"
 . "$ZDOTDIR/modules/completion"
+. "$ZDOTDIR/vendor/sindresorhus/pure/pure.zsh"
 
 which npm >/dev/null && . <(npm completion)
-
-# Match Arch Linux's bash prompt, e.g.: "[user@host ~]$ "
-PROMPT="[%n@%M %1~]$ "
 
 # Modules {{{1
 
