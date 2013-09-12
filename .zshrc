@@ -10,7 +10,6 @@ IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 
 . "$ZDOTDIR/modules/options"
 . "$ZDOTDIR/modules/completion"
-. "$ZDOTDIR/vendor/sindresorhus/pure/pure.zsh"
 
 which npm >/dev/null && . <(npm completion)
 
@@ -22,6 +21,10 @@ autoload -U compinit edit-command-line
 # Smart URLs
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
+
+# Prompts
+autoload -U promptinit && promptinit
+prompt pure
 
 # [Git]Hub
 compdef hub=git
