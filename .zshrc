@@ -11,8 +11,6 @@ IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
 . "$ZDOTDIR/modules/options"
 . "$ZDOTDIR/modules/completion"
 
-which npm >/dev/null && . <(npm completion)
-
 # Modules {{{1
 
 # Modules to load
