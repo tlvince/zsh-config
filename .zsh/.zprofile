@@ -1,2 +1,2 @@
-PROFILE="$HOME/shell/profile"
+PROFILE="$HOME/.shell/profile"
 [[ -f "$PROFILE" ]] && . "$PROFILE"
