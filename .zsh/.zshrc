@@ -5,7 +5,7 @@
 # Environment {{{1
 
 # Source the global imports
-IMPORTS="${XDG_CONFIG_HOME:-$HOME/.config}/shell/imports"
+IMPORTS="$HOME/shell/imports"
 [[ -f "$IMPORTS" ]] && . "$IMPORTS"
 
 . "$ZDOTDIR/modules/options"

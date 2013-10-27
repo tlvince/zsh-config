@@ -1,4 +1,4 @@
-ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+ZDOTDIR="$HOME/.zsh"
 
 fpath=(
   "$ZDOTDIR/modules"
