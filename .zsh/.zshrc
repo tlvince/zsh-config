@@ -22,7 +22,7 @@ zle -N self-insert url-quote-magic
 
 # Prompts
 autoload -U promptinit && promptinit
-PURE_DISABLE_GIT_PULL=true
+PURE_GIT_PULL=false
 prompt pure
 
 # [Git]Hub
