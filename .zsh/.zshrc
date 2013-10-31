@@ -25,9 +25,6 @@ autoload -U promptinit && promptinit
 PURE_GIT_PULL=0
 prompt pure
 
-# [Git]Hub
-compdef hub=git
-
 # Functions {{{1
 
 # Invert cursor colour when in Vi normal mode
