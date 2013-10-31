@@ -29,11 +29,11 @@ prompt pure
 
 # Invert cursor colour when in Vi normal mode
 zle-keymap-select () {
-    if [ $KEYMAP = vicmd ]; then
-        echo -ne "\033]12;DarkGrey\007"
-    else
-        echo -ne "\033]12;LightGrey\007"
-    fi
+  if [ $KEYMAP = vicmd ]; then
+    echo -ne "\033]12;DarkGrey\007"
+  else
+    echo -ne "\033]12;LightGrey\007"
+  fi
 }
 
 # Widgets {{{1
