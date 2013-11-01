@@ -10,6 +10,7 @@ IMPORTS="$HOME/.shell/imports"
 
 . "$ZDOTDIR/modules/options"
 . "$ZDOTDIR/modules/completion"
+. "$ZDOTDIR/vendor/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Modules {{{1
 
