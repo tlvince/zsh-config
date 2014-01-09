@@ -2,15 +2,18 @@
 
 ## Usage
 
-0. Set up your `XDG_{DATA,CACHE,CONFIG}_HOME` environment
+0. Create a path to store the repo. I put mine in `$HOME/projects/dotfiles`.
+
+        dotfiles="$HOME/projects/dotfiles"
+        mkdir -p "$dotfiles"
 
 1. Clone:
 
-        git clone --recursive https://github.com/tlvince/zsh-config.git "$XDG_CONFIG_HOME/zsh"
+        git clone --recursive https://github.com/tlvince/zsh-config.git "$dotfiles"
 
-2. Symlink `zshenv` to your home directory:
+2. Symlink `.zshenv` and `.zsh` into your home directory:
 
-        ln -s "$XDG_CONFIG_HOME/zsh/.zshenv" "$HOME"
+        ln -s "$dotfiles/zsh-config/".zsh{,env} "$HOME"
 
 ## Author
 
