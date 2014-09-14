@@ -1,4 +1,4 @@
-.zcompdump
+.zcompdump*
 .zcompcache
 completions
 .zsh/.zhistory
