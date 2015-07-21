@@ -2,9 +2,9 @@
 
 ## Usage
 
-0. Create a path to store the repo. I put mine in `$HOME/projects/dotfiles`.
+0. Create a path to store the repo. I put mine in `$HOME/projects/dotfiles/zsh-config`.
 
-        dotfiles="$HOME/projects/dotfiles"
+        dotfiles="$HOME/projects/dotfiles/zsh-config"
         mkdir -p "$dotfiles"
 
 1. Clone:
@@ -13,11 +13,11 @@
 
 2. Symlink `.zshenv` and `.zsh` into your home directory:
 
-        ln -s "$dotfiles/zsh-config/".zsh{,env} "$HOME"
+        ln -s "$dotfiles/".zsh{,env} "$HOME"
 
 ## Author
 
-Copyright 2010-2014 Tom Vincent <http://tlvince.com/contact>
+Copyright 2010-2015 Tom Vincent <http://tlvince.com/contact>
 
 ## License
 
