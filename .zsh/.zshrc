@@ -12,6 +12,11 @@ IMPORTS="$HOME/.shell/imports"
 . "$ZDOTDIR/modules/completion"
 . "$ZDOTDIR/vendor/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
+[[ -d "/usr/local/opt/fzf" ]] && {
+  . "/usr/local/opt/fzf/shell/completion.zsh"
+  . "/usr/local/opt/fzf/shell/key-bindings.zsh"
+}
+
 # Modules {{{1
 
 # Modules to load
@@ -52,9 +57,6 @@ bindkey "^e" edit-command-line
 
 # Insert the last argument of the previous command
 bindkey -M viins "^[." insert-last-word
-
-# Complete the last word
-bindkey -M viins '\C-i' complete-word
 
 # Shift-Tab
 bindkey '^[[Z' reverse-menu-complete
