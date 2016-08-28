@@ -57,4 +57,5 @@ zstyle ':completion::approximate*:*' prefix-needed false
 # Hosts {{{1
 zstyle -e ':completion:*:hosts' hosts 'reply=(
   ${=${${${${(@M)${(f)"$(cat ~/.ssh/config 2>/dev/null)"}:#Host *}#Host }:#*\**}:#*\?*}}
+  ${(A)_etc_hosts:=${(s: :)${(ps:\t:)${${(f)~~"$(</etc/hosts.head)"}%%\#*}##[:blank:]#[^[:blank:]]#}}}
 )'
