@@ -12,9 +12,9 @@ IMPORTS="$HOME/.shell/imports"
 . "$ZDOTDIR/modules/completion"
 . "$ZDOTDIR/vendor/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-[[ -d "/usr/local/opt/fzf" ]] && {
-  . "/usr/local/opt/fzf/shell/completion.zsh"
-  . "/usr/local/opt/fzf/shell/key-bindings.zsh"
+[[ -d "/usr/share/fzf" ]] && {
+  . "/usr/share/fzf/completion.zsh"
+  . "/usr/share/fzf/key-bindings.zsh"
 }
 
 # Modules {{{1
