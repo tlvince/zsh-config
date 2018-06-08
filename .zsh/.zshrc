@@ -17,6 +17,10 @@ IMPORTS="$HOME/.shell/imports"
   . "/usr/share/fzf/key-bindings.zsh"
 }
 
+[[ -f "/usr/share/z/z.sh" ]] && {
+  . "/usr/share/z/z.sh"
+}
+
 # Modules {{{1
 
 # Modules to load
