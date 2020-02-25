@@ -19,7 +19,7 @@ fzf="/usr/share/fzf"
   . "$fzf/key-bindings.zsh"
 }
 
-z="/usr/share/z.sh"
+z="/usr/share/z/z.sh"
 [[ -r "$z" ]] || z="/usr/local/etc/profile.d/z.sh"
 [[ -r "$z" ]] && {
   . "$z"
