@@ -20,8 +20,8 @@ fzf="/usr/share/fzf"
 }
 
 z="/usr/share/z.sh"
-[[ -f "$z" ]] || z="/usr/local/etc/profile.d/z.sh"
-[[ -f "$z" ]] && {
+[[ -r "$z" ]] || z="/usr/local/etc/profile.d/z.sh"
+[[ -r "$z" ]] && {
   . "$z"
 }
 
@@ -31,7 +31,8 @@ z="/usr/share/z.sh"
 autoload -U compinit edit-command-line
 
 # Smart URLs
-autoload -U url-quote-magic
+autoload -Uz bracketed-paste-magic url-quote-magic
+zle -N bracketed-paste bracketed-paste-magic
 zle -N self-insert url-quote-magic
 
 # Prompts
