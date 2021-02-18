@@ -8,10 +8,6 @@
 IMPORTS="$HOME/.shell/imports"
 [[ -f "$IMPORTS" ]] && . "$IMPORTS"
 
-. "$ZDOTDIR/modules/options"
-. "$ZDOTDIR/modules/completion"
-. "$ZDOTDIR/vendor/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-
 fzf="/usr/share/fzf"
 [[ -d "$fzf" ]] || fzf="/usr/local/opt/fzf/shell"
 [[ -d "$fzf" ]] && {
@@ -25,6 +21,10 @@ z="/usr/share/zsh/plugins/zsh-z/zsh-z.plugin.zsh"
 [[ -r "$z" ]] && {
   . "$z"
 }
+
+. "$ZDOTDIR/modules/options"
+. "$ZDOTDIR/modules/completion"
+. "$ZDOTDIR/vendor/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Modules {{{1
 
